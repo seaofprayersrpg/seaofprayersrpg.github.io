@@ -1,0 +1,13 @@
+.expef {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #111;
+  border-radius: 0px 70px 0px 70px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
