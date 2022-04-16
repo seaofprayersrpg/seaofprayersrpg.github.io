@@ -146,3 +146,165 @@
 .expbox input#otrosdata:checked ~ .txt3 {
   top: 0px;
 }
+.expcaja1 {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-left: 2px solid var(--groups);
+    font-family: 'Share Tech Mono';
+    text-transform: uppercase;
+    font-size: 10px;
+    background: url(https://2img.net/i.imgur.com/Py4J0zS.png), linear-gradient(rgb(133 34 34) ,#5e393924);
+    letter-spacing: 0.5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url(https://2img.net/i.imgur.com/Py4J0zS.png), linear-gradient(rgb(4 4 4), rgb(0 0 0 / 0%));
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: currentcolor;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.expcaja1 .ico {
+  padding: 10px;
+  background: var(--groups);
+}
+.expcajas {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.exptit1 {
+    font-family: 'Teko';
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: right;
+    padding-right: 10px;
+    border-bottom: 2px solid var(--groups);
+    border-radius: 0px 20px 0px 20px;
+    margin-bottom: 40px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.expPAWN, .expROOK, .expBISHOP, .expKNIGHT, .expKING, .expQUEEN {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 30px;
+    margin-top: -10px;
+    border-radius: 50%;
+    outline: 2px solid #111;
+    outline-offset: 2px;
+    align-items: center;
+}
+.expPAWN:before {
+    content: "\f443";
+    font-family: 'Font Awesome 5 Pro';
+}
+.expROOK:before {
+    content: "\f447";
+    font-family: 'Font Awesome 5 Pro';
+}
+.expBISHOP:before {
+    content: "\f43a";
+    font-family: 'Font Awesome 5 Pro';
+}
+.expKNIGHT:before {
+    content: "\f441";
+    font-family: 'Font Awesome 5 Pro';
+}
+.expKING:before {
+    content: "\f43f";
+    font-family: 'Font Awesome 5 Pro';
+}
+.expQUEEN:before {
+    content: "\f445";
+    font-family: 'Font Awesome 5 Pro';
+}
+.expquote {
+    width: 425px;
+    border: 1px solid var(--groups);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 0px 10px 0px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Share Tech Mono';
+    font-style: italic;
+    transition: all ease-in-out .2s;
+    text-transform: lowercase;
+}
+.expquote:hover {
+   border: 1px solid #111; 
+   background-color: var(--groups);
+   color: #eee;
+   transition: all ease-in-out .2s;
+}
+.expstat {
+    display: flex;
+    justify-content: center;
+}
+.expstats {
+    width: 200px;
+    border: 2px solid var(--groups);
+    font-size: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono';
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: 1px solid #111;
+    outline-offset: 2px;
+    background-color: #000;
+    border-radius: 20px 0px 20px 0px;
+    letter-spacing: -3px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.expstats:first-child:before {
+    content: "\f21e";
+    position: absolute;
+    opacity: 1;
+    font-size: 80px;
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    color: #111;
+    mix-blend-mode: lighten;
+}
+.expstats:before {
+    content: "\f808";
+    position: absolute;
+    opacity: 1;
+    font-size: 80px;
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    color: #111;
+    mix-blend-mode: lighten;
+}
+.expstt {display: flex;justify-content: center;}
+.expsta {
+    padding: 10px;
+    border: 1px solid #111;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--groups);
+    font-family: 'Teko';
+    letter-spacing: 2px;
+}
