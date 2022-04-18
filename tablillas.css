@@ -343,6 +343,10 @@
   overflow: auto;
   border: 1px solid #111;
   margin-top: 25px;
+  border-radius: 0px 0px 0px 60px;
+}
+.ccmes br {
+    display: none;
 }
 .ccmes h1 {
   font-family: "Teko", sans-serif;
@@ -355,6 +359,10 @@
   opacity: 0.6;
   margin-bottom: -10px;
   letter-spacing: 1px;
+}
+.ccmes h1:first-letter {
+    font-style: italic;
+    color: var(--groups);
 }
 .ccmes i {
   color: var(--groups);
