@@ -1,3 +1,4 @@
+/**BUSQ TRAMA**/
 .tbus1 {
   width: 350px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -45,6 +46,7 @@
   padding: 0px 20px 0px 20px;
   margin-top: 10px;
 }
+/**BUSQ PJ**/
 .tbus2 {
   width: 500px;
   background-color: rgba(0, 0, 0, 0.9);
@@ -101,4 +103,183 @@
   position: relative;
   top: -1px;
   font-weight: 600;
+}
+/**INDICE BODEGA**/
+.sopbaul {
+  width: 800px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #111;
+  margin: 0 auto;
+  border-radius: 0px 70px 0px 70px;
+}
+.baultp {
+  width: 800px;
+  height: 70px;
+  border-bottom: 1px solid #111;
+  display: flex;
+}
+.baultp i {
+  height: 35px;
+  font-size: 32px;
+  border-right: 1px solid var(--groups);
+  border-left: 1px solid var(--groups);
+  padding: 0px 5px 0px 5px;
+  color: var(--groups);
+  margin: 18px;
+}
+.bnav {
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 2px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: 10px;
+  text-align: right;
+  line-height: 90%;
+  margin-top: 30px;
+}
+.bnav a {
+  text-decoration: none;
+  color: #bbb;
+}
+.bnav::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  background: var(--groups);
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
+}
+.tbcaj1 {
+  width: 800px;
+  height: 428px;
+  border-radius: 0px 0px 0px 70px;
+  display: flex;
+}
+.tbcaj2 {
+  width: 300px;
+  height: 390px;
+  margin: 0px 0px 0px 40px;
+  border-left: 1px solid #111;
+  border-right: 1px solid #111;
+  border-bottom: 1px solid #111;
+  border-radius: 0px 0px 0px 60px;
+}
+.tbimg {
+  width: 300px;
+  height: 330px;
+  border-bottom: 1px solid #111;
+}
+.tbnam {
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 90%;
+  text-align: right;
+  text-transform: lowercase;
+  color: var(--groups);
+  opacity: 0.8;
+  margin-right: 10px;
+  position: relative;
+  top: -18px;
+}
+.tbnam span {
+  text-transform: uppercase;
+  font-size: 15px;
+  position: relative;
+  top: -4px;
+  color: #bbb;
+}
+.tblyr {
+  width: 260px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 2px;
+  color: #bbb;
+  font-size: 7.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: right;
+  line-height: 120%;
+  border-right: 3px solid var(--groups);
+  padding-right: 5px;
+  margin-top: -23px;
+  position: relative;
+  right: -25px;
+}
+.tbcaj3 {
+  width: 400px;
+  height: 390px;
+  margin: 20px;
+}
+.tbdts {
+  padding: 20px;
+  border-top: 2px solid var(--groups);
+  border-bottom: 2px solid var(--groups);
+}
+.bbbtxt {
+  font-size: 12px;
+  line-height: 140%;
+  text-align: justify;
+  color: #999;
+  overflow: auto;
+  height: 120px;
+  padding-right: 10px;
+}
+.bbbtxt span {
+  background-color: var(--groups);
+  font-size: 12px;
+  padding: 2px;
+  margin-right: 3px;
+}
+.tbcaj4 {
+  width: 414px;
+  height: 205px;
+  margin-top: 20px;
+}
+.bcjpy {
+  width: 310px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #111;
+  padding: 8px;
+  margin: 10px 0px 0px 44px;
+}
+.pyicon {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--groups);
+  padding: 10px;
+  border-radius: 0px 10px 0px 10px;
+  border: 1px solid #111;
+  font-size: 18px;
+}
+.plsg {
+  margin-left: 10px;
+  position: relative;
+  top: 1px;
+}
+.plsg a {
+  text-decoration: none;
+  font-family: "Teko", sans-serif;
+  color: var(--groups);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+.plsg span {
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 1px;
+  color: #bbb;
+  line-height: 120%;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 9px;
+  display: block;
 }
