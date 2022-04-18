@@ -418,3 +418,138 @@
   margin-right: 5px;
   font-weight: 900;
 }
+/**RELAS BODEGA**/
+.soprls {
+  width: 800px;
+  height: 565px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #111;
+  margin: 0 auto;
+  border-radius: 0px 70px 0px 20px;
+}
+.rlstp {
+  width: 800px;
+  height: 70px;
+  border-bottom: 1px solid #111;
+  display: flex;
+}
+.rlstp i {
+  height: 35px;
+  font-size: 32px;
+  border-right: 1px solid var(--groups);
+  border-left: 1px solid var(--groups);
+  padding: 0px 5px 0px 5px;
+  color: var(--groups);
+  margin: 18px;
+}
+.rsnav {
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 2px;
+  color: #bbb;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: 10px;
+  text-align: right;
+  line-height: 90%;
+  margin-top: 30px;
+}
+.rsnav::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  background: var(--groups);
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+}
+.rlscaj1 {
+  margin: 20px;
+  height: 450px;
+  overflow: auto;
+}
+.rlsif {
+  width: 240px;
+  height: 300px;
+  display: inline-block;
+  border: 1px solid #111;
+  margin: 0px 5px 5px 0px;
+  border-radius: 0px 0px 0px 20px;
+}
+.rlimg {
+  width: 238px;
+  height: 130px;
+  border: 1px solid #111;
+}
+.rlnm {
+  width: 238px;
+  height: 10px;
+}
+.rlnam {
+  font-family: "Teko", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 90%;
+  text-align: right;
+  text-transform: lowercase;
+  color: #bbb;
+  opacity: 0.8;
+  margin-right: 10px;
+  position: relative;
+  top: -18px;
+}
+.rlnam span {
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  top: -3px;
+  opacity: 1;
+}
+.rlinf {
+  width: 211px;
+  height: 132px;
+  margin: 10px;
+  position: relative;
+  top: -18px;
+  overflow: auto;
+  padding-right: 5px;
+  text-align: justify;
+  position: relative;
+  top: -30px;
+  left: 5px;
+  color: #999;
+}
+#isleno {
+  color: #47526a;
+  border-color: #47526a;
+}
+#isleno span {
+  color: #bbb;
+}
+#isleno::-webkit-scrollbar-thumb {
+  background: #47526a;
+  border: 2px solid #0a0a0a;
+}
+#residente {
+  color: #6a5847;
+  border-color: #6a5847;
+}
+#residente span {
+  color: #bbb;
+}
+#residente::-webkit-scrollbar-thumb {
+  background: #6a5847;
+  border: 2px solid #0a0a0a;
+}
+#fallecido {
+  color: #4a2f3e;
+  border-color: #4a2f3e;
+}
+#fallecido span {
+  color: #bbb;
+}
+#fallecido::-webkit-scrollbar-thumb {
+  background: #4a2f3e;
+  border: 2px solid #0a0a0a;
+}
