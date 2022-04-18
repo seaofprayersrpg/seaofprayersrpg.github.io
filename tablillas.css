@@ -45,3 +45,60 @@
   padding: 0px 20px 0px 20px;
   margin-top: 10px;
 }
+.tbus2 {
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #111;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 0px 50px 0px 50px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+.bpimg {
+  width: 190px;
+  height: 370px;
+  border-radius: 0px 0px 0px 50px;
+}
+.bptxt2 {
+  width: 275px;
+  height: 339px;
+  margin: 15px;
+}
+.bp2tt {
+  text-transform: uppercase;
+  font-family: Teko;
+  text-align: center;
+  color: var(--groups);
+  font-size: 30px;
+  line-height: 100%;
+  margin: 10px;
+}
+.bp2txt {
+  height: 270px;
+  padding: 0px 10px 0px 10px;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: justify;
+  overflow: auto;
+}
+.tb2dat {
+  font-family: "Share Tech Mono", monospace;
+  color: #bbb;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  line-height: 90%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.tb2dat i {
+  color: var(--groups);
+  font-size: 8px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  top: -1px;
+  font-weight: 600;
+}
