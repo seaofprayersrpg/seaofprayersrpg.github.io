@@ -1,0 +1,47 @@
+.tbus1 {
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 2px solid var(--groups);
+  border-bottom: 2px solid #111;
+  margin: 0 auto;
+  padding: 20px 40px 20px 40px;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: -40px;
+}
+.tbus1 h2 {
+  text-transform: uppercase;
+  font-family: Teko;
+  text-align: center;
+  color: #bbb;
+  font-size: 25px;
+  line-height: 120%;
+  margin-top: -5px;
+}
+.t1dat {
+  font-family: "Share Tech Mono", monospace;
+  color: #bbb;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  line-height: 90%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--groups);
+  margin-top: -25px;
+}
+.t1dat i {
+  color: var(--groups);
+  font-size: 6px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  top: -1px;
+  font-weight: 600;
+}
+.tb1txt {
+  font-size: 12px;
+  line-height: 140%;
+  text-align: justify;
+  padding: 0px 20px 0px 20px;
+  margin-top: 10px;
+}
