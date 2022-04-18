@@ -469,6 +469,9 @@
   height: 450px;
   overflow: auto;
 }
+.rlscaj1 br {
+    display: none;
+}
 .rlsif {
   width: 240px;
   height: 300px;
@@ -519,6 +522,9 @@
   top: -30px;
   left: 5px;
   color: #999;
+}
+.rlinf br {
+    display: block;
 }
 #isleno {
   color: #47526a;
