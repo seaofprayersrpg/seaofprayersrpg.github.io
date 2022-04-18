@@ -283,3 +283,130 @@
   font-size: 9px;
   display: block;
 }
+/**CRONO BODEGA**/
+.sopcrono {
+  width: 800px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #111;
+  margin: 0 auto;
+  border-radius: 0px 70px 0px 70px;
+}
+.cronotp {
+  width: 800px;
+  height: 70px;
+  border-bottom: 1px solid #111;
+  display: flex;
+}
+.cicon i {
+  height: 35px;
+  font-size: 32px;
+  border-right: 1px solid var(--groups);
+  border-left: 1px solid var(--groups);
+  padding: 0px 5px 0px 5px;
+  color: var(--groups);
+  margin: 18px;
+}
+.cnav {
+  width: 750px;
+  margin-top: 28px;
+  margin-left: 10px;
+}
+.cnav h {
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 2px;
+  color: #bbb;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 90%;
+}
+.cnav i {
+  margin-left: 3px;
+  color: var(--groups);
+  font-size: 12px;
+  margin-right: 20px;
+}
+.crcajg {
+  width: 750px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.ccmes {
+  width: 325px;
+  height: 355px;
+  padding: 0px 20px 20px 20px;
+  overflow: auto;
+  border: 1px solid #111;
+  margin-top: 25px;
+}
+.ccmes h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #bbb;
+  opacity: 0.6;
+  margin-bottom: -10px;
+  letter-spacing: 1px;
+}
+.ccmes i {
+  color: var(--groups);
+}
+.crtem {
+  width: auto;
+  align-items: center;
+  border: 1px solid #111;
+  padding: 10px;
+  margin: 5px 0px 0px 0px;
+  display: flex;
+  border-radius: 0px 10px 0px 20px;
+}
+.crcon {
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0px 10px 0px 10px;
+  border: 1px solid #111;
+  color: var(--groups);
+}
+.crtdt {
+  margin-left: 10px;
+}
+.crtdt a {
+  text-decoration: none;
+  font-family: "Teko", sans-serif;
+  color: var(--groups);
+  font-size: 15px !important;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 100%;
+  position: relative;
+  top: 2px;
+}
+.crtdt span {
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 1px;
+  color: #bbb;
+  line-height: 150%;
+  font-weight: 300 !important;
+  text-transform: uppercase;
+  font-size: 7px !important;
+  display: block;
+}
+.crtdt n {
+  font-size: 10px !important;
+  color: var(--groups);
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 900;
+}
