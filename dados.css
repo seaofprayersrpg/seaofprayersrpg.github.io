@@ -1,0 +1,1675 @@
+.user-action {
+    text-transform: uppercase;
+    font: 14px 'teko';
+    border-radius: 5px;
+    width: 350px;
+    margin: auto;
+    border-bottom: 2px solid var(--accent4);
+    background: #0a0a0a;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.user-action:before {
+    content: "\f527";
+    font-family: 'Font Awesome 5 Pro';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 49px;
+    color: #2c2c2c;
+    opacity: 0.5;
+    mix-blend-mode: lighten;
+}
+.user-action strong {
+    margin-right: 3px;
+    color: var(--accent3);
+    font-weight: 600;
+}
+.titulo-d20-personaje, .titulo-d20-oponente, .titulo-d10, .titulo-multiplicador {
+    display: none;
+}
+.resultado-d20-personaje, .resultado-d20-oponente, .resultado-d10, .resultado-multiplicador {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #040404;
+    width: 350px;
+    margin: auto;
+    padding: 30px 10px 10px 10px;
+    box-sizing: border-box;
+}
+.resultado-d20-personaje {
+    margin-top: 20px;
+    border-radius: 20px 0 0 0;
+    border-right: 3px solid var(--accent4);
+    border-left: 3px solid var(--accent4);
+}
+.resultado-multiplicador {
+    margin-top: 20px;
+    border-right: 3px solid var(--accent4);
+    border-left: 3px solid var(--accent4);
+}
+.resultado-d10 {
+    margin-top: 20px;
+    border-right: 3px solid var(--accent4);
+    border-left: 3px solid var(--accent4);
+}
+.resultado-d20-oponente {
+    border-radius: 0 0 20px 0;
+    border-left: 3px solid var(--accent4);
+    border-right: 3px solid var(--accent4);
+}
+.resultado-d20-personaje:before {
+    content: "status de tu ataque";
+    position: absolute;
+    top: 5px;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono';
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 1px #000;
+}
+.resultado-d20-oponente:before {
+    content: "status del ataque enemigo";
+    position: absolute;
+    top: 5px;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono';
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 1px #000;
+}
+.resultado-d10:before {
+    content: "status del sistema narrativo";
+    position: absolute;
+    top: 0px;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono';
+    letter-spacing: -0.5px;
+}
+.resultado-multiplicador:before {
+    content: "éxito de la habilidad";
+    position: absolute;
+    top: 0px;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono';
+    letter-spacing: -0.5px;
+}
+.resultado-multiplicador .dado {
+    outline: 1px solid #111;
+    width: 201px;
+    height: 51px;
+    border-radius: 0px 10px 0px 10px;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+    box-sizing: border-box;
+    border-left: 20px solid var(--accent5);
+    border-right: 20px solid var(--accent5);
+}
+.resultado-d10 .dado {
+    outline: 1px solid #111;
+    width: 201px;
+    height: 51px;
+    border-radius: 0px 10px 0px 10px;
+    overflow: hidden;
+    position: relative;
+    background: #080808;
+    box-sizing: border-box;
+    border-left: 20px solid var(--accent5);
+    border-right: 20px solid var(--accent5);
+}
+.resultado-d20-personaje .dado {
+    border: 1px solid #111;
+    width: 200px;
+    height: 50px;
+    border-radius: 0px 10px 0px 10px;
+    overflow: hidden;
+    position: relative;
+}
+.resultado-d20-oponente .dado {
+    border: 1px solid #111;
+    width: 200px;
+    height: 50px;
+    border-radius: 0px 10px 0px 10px;
+    overflow: hidden;
+    position: relative;
+}
+.dadoicono {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    opacity: 0.2;
+    color: #707070;
+}
+.dadoinfoo {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    width: 200px;
+    text-align: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: 'Teko';
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding-bottom: 5px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #bbb;
+}
+.dadoiconp {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    opacity: 0.2;
+    color: #fff;
+}
+.dadoinfop {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    width: 150px;
+    text-align: center;
+    padding-left: 0px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: 'Teko';
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding-bottom: 5px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #bbb;
+}
+.dadoiconm, .dadoicon10 {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    opacity: 0.2;
+    color: #fff;
+}
+.resultado-multiplicador .dado.d-1:after, .resultado-multiplicador .dado.d-2:after, .resultado-multiplicador .dado.d-3:after {
+    position: absolute;
+    top: 0;
+    width: 160px;
+    box-sizing: border-box;
+    text-transform: lowercase;
+    font-family: 'Teko';
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    padding-bottom: 6px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #bbb;
+    content: "x0.5";
+    background: #111;
+}
+.resultado-multiplicador .dado.d-1:before, .resultado-multiplicador .dado.d-2:before, .resultado-multiplicador .dado.d-3:before {
+    content: "rebaja de stat";
+    text-transform: uppercase;
+    position: absolute;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 28px;
+    z-index: 999;
+}
+.resultado-multiplicador .dado.d-4:after, .resultado-multiplicador .dado.d-5:after, .resultado-multiplicador .dado.d-6:after,  .resultado-multiplicador .dado.d-7:after,  .resultado-multiplicador .dado.d-8:after,  .resultado-multiplicador .dado.d-9:after {
+    position: absolute;
+    top: 0;
+    width: 160px;
+    box-sizing: border-box;
+    text-transform: lowercase;
+    font-family: 'Teko';
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    padding-bottom: 6px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #bbb;
+    content: "x1";
+    background: #111;
+}
+.resultado-multiplicador .dado.d-4:before, .resultado-multiplicador .dado.d-5:before, .resultado-multiplicador .dado.d-6:before, .resultado-multiplicador .dado.d-7:before, .resultado-multiplicador .dado.d-8:before, .resultado-multiplicador .dado.d-9:before {
+    content: "sin cambio de stat";
+    text-transform: uppercase;
+    position: absolute;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 28px;
+    z-index: 999;
+}
+.resultado-multiplicador .dado.d-10:after, .resultado-multiplicador .dado.d-11:after, .resultado-multiplicador .dado.d-12:after {
+    position: absolute;
+    top: 0;
+    width: 160px;
+    box-sizing: border-box;
+    text-transform: lowercase;
+    font-family: 'Teko';
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    padding-bottom: 6px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: #bbb;
+    content: "x1.5";
+    background: #111;
+}
+.resultado-multiplicador .dado.d-10:before, .resultado-multiplicador .dado.d-11:before, .resultado-multiplicador .dado.d-12:before {
+    content: "suma de stat";
+    text-transform: uppercase;
+    position: absolute;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 28px;
+    z-index: 999;
+}
+.resultado-d20-personaje .dado.d-1:before, .resultado-d20-personaje .dado.d-2:before, .resultado-d20-personaje .dado.d-3:before, .resultado-d20-personaje .dado.d-4:before, .resultado-d20-personaje .dado.d-5:before {
+    text-transform: uppercase;
+    content: "ataque fallido";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-1:after, .resultado-d20-personaje .dado.d-2:after, .resultado-d20-personaje .dado.d-3:after, .resultado-d20-personaje .dado.d-4:after, .resultado-d20-personaje .dado.d-5:after {
+    content: "01";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-6:before, .resultado-d20-personaje .dado.d-7:before, .resultado-d20-personaje .dado.d-8:before {
+    text-transform: uppercase;
+    content: "sumas +1 punto";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-6:after, .resultado-d20-personaje .dado.d-7:after, .resultado-d20-personaje .dado.d-8:after {
+    content: "02";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-9:before, .resultado-d20-personaje .dado.d-10:before, .resultado-d20-personaje .dado.d-11:before {
+    text-transform: uppercase;
+    content: "sumas +1 punto";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-9:after, .resultado-d20-personaje .dado.d-10:after, .resultado-d20-personaje .dado.d-11:after {
+    content: "03";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-12:before, .resultado-d20-personaje .dado.d-13:before, .resultado-d20-personaje .dado.d-14:before {
+    text-transform: uppercase;
+    content: "sumas +1 punto";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-12:after, .resultado-d20-personaje .dado.d-13:after, .resultado-d20-personaje .dado.d-14:after {
+    content: "04";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-15:before, .resultado-d20-personaje .dado.d-16:before, .resultado-d20-personaje .dado.d-17:before, .resultado-d20-personaje .dado.d-18:before, .resultado-d20-personaje .dado.d-19:before {
+    text-transform: uppercase;
+    content: "sumas +2 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-15:after, .resultado-d20-personaje .dado.d-16:after, .resultado-d20-personaje .dado.d-17:after, .resultado-d20-personaje .dado.d-18:after, .resultado-d20-personaje .dado.d-19:after {
+    content: "05";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-20:before, .resultado-d20-personaje .dado.d-21:before, .resultado-d20-personaje .dado.d-22:before, .resultado-d20-personaje .dado.d-23:before, .resultado-d20-personaje .dado.d-24:before {
+    text-transform: uppercase;
+    content: "sumas +2 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-20:after, .resultado-d20-personaje .dado.d-21:after, .resultado-d20-personaje .dado.d-22:after, .resultado-d20-personaje .dado.d-23:after, .resultado-d20-personaje .dado.d-24:after {
+    content: "06";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-25:before, .resultado-d20-personaje .dado.d-26:before, .resultado-d20-personaje .dado.d-27:before, .resultado-d20-personaje .dado.d-28:before, .resultado-d20-personaje .dado.d-29:before, .resultado-d20-personaje .dado.d-30:before {
+    text-transform: uppercase;
+    content: "sumas +2 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-25:after, .resultado-d20-personaje .dado.d-26:after, .resultado-d20-personaje .dado.d-27:after, .resultado-d20-personaje .dado.d-28:after, .resultado-d20-personaje .dado.d-29:after, .resultado-d20-personaje .dado.d-30:after {
+    content: "07";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-31:before, .resultado-d20-personaje .dado.d-32:before, .resultado-d20-personaje .dado.d-33:before, .resultado-d20-personaje .dado.d-34:before, .resultado-d20-personaje .dado.d-35:before, .resultado-d20-personaje .dado.d-36:before {
+    text-transform: uppercase;
+    content: "sumas +3 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-31:after, .resultado-d20-personaje .dado.d-32:after, .resultado-d20-personaje .dado.d-33:after, .resultado-d20-personaje .dado.d-34:after, .resultado-d20-personaje .dado.d-35:after, .resultado-d20-personaje .dado.d-36:after {
+    content: "08";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-37:before, .resultado-d20-personaje .dado.d-38:before, .resultado-d20-personaje .dado.d-39:before, .resultado-d20-personaje .dado.d-40:before, .resultado-d20-personaje .dado.d-41:before, .resultado-d20-personaje .dado.d-42:before, .resultado-d20-personaje .dado.d-43:before {
+    text-transform: uppercase;
+    content: "sumas +3 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-37:after, .resultado-d20-personaje .dado.d-38:after, .resultado-d20-personaje .dado.d-39:after, .resultado-d20-personaje .dado.d-40:after, .resultado-d20-personaje .dado.d-41:after, .resultado-d20-personaje .dado.d-42:after, .resultado-d20-personaje .dado.d-43:after {
+    content: "09";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-44:before, .resultado-d20-personaje .dado.d-45:before, .resultado-d20-personaje .dado.d-46:before, .resultado-d20-personaje .dado.d-47:before, .resultado-d20-personaje .dado.d-48:before, .resultado-d20-personaje .dado.d-49:before, .resultado-d20-personaje .dado.d-50:before {
+    text-transform: uppercase;
+    content: "sumas +3 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-44:after, .resultado-d20-personaje .dado.d-45:after, .resultado-d20-personaje .dado.d-46:after, .resultado-d20-personaje .dado.d-47:after, .resultado-d20-personaje .dado.d-48:after, .resultado-d20-personaje .dado.d-49:after, .resultado-d20-personaje .dado.d-50:after {
+    content: "10";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-51:before, .dado.d-52:before, .dado.d-53:before, .dado.d-54:before, .dado.d-55:before, .dado.d-56:before, .dado.d-57:before {
+    text-transform: uppercase;
+    content: "sumas +4 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-51:after, .dado.d-52:after, .dado.d-53:after, .dado.d-54:after, .dado.d-55:after, .dado.d-56:after, .dado.d-57:after {
+    content: "11";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-58:before, .dado.d-59:before, .dado.d-60:before, .dado.d-61:before, .dado.d-62:before, .dado.d-63:before, .dado.d-64:before {
+    text-transform: uppercase;
+    content: "sumas +4 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-58:after, .dado.d-59:after, .dado.d-60:after, .dado.d-61:after, .dado.d-62:after, .dado.d-63:after, .dado.d-64:after {
+    content: "12";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-65:before, .dado.d-66:before, .dado.d-67:before, .dado.d-68:before, .dado.d-69:before, .dado.d-70:before {
+    text-transform: uppercase;
+    content: "sumas +4 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-65:after, .dado.d-66:after, .dado.d-67:after, .dado.d-68:after, .dado.d-69:after, .dado.d-70:after {
+    content: "13";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-71:before, .dado.d-72:before, .dado.d-73:before, .dado.d-74:before, .dado.d-75:before, .dado.d-76:before {
+    text-transform: uppercase;
+    content: "sumas +5 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-71:after, .dado.d-72:after, .dado.d-73:after, .dado.d-74:after, .dado.d-75:after, .dado.d-76:after {
+    content: "14";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-77:before, .dado.d-78:before, .dado.d-79:before, .dado.d-80:before, .dado.d-81:before {
+    text-transform: uppercase;
+    content: "sumas +5 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-77:after, .dado.d-78:after, .dado.d-79:after, .dado.d-80:after, .dado.d-81:after {
+    content: "15";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-82:before, .dado.d-83:before, .dado.d-84:before, .dado.d-85:before, .dado.d-86:before {
+    text-transform: uppercase;
+    content: "sumas +5 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-82:after, .dado.d-83:after, .dado.d-84:after, .dado.d-85:after, .dado.d-86:after {
+    content: "16";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-87:before, .dado.d-88:before, .dado.d-89:before {
+    text-transform: uppercase;
+    content: "sumas +6 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-87:after, .dado.d-88:after, .dado.d-89:after {
+    content: "17";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-90:before, .dado.d-91:before, .dado.d-92:before {
+    text-transform: uppercase;
+    content: "sumas +6 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-90:after, .dado.d-91:after, .dado.d-92:after {
+    content: "18";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-93:before, .dado.d-94:before, .dado.d-95:before {
+    text-transform: uppercase;
+    content: "sumas +6 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-93:after, .dado.d-94:after, .dado.d-95:after {
+    content: "19";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-personaje .dado.d-96:before, .dado.d-97:before, .dado.d-98:before .dado.d-99:before, .dado.d-100:before, {
+    text-transform: uppercase;
+    content: "sumas +8 puntos";
+    position: absolute;
+    width: 150px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px;
+}
+.resultado-d20-personaje .dado.d-96:after, .dado.d-97:after, .dado.d-98:after .dado.d-99:after, .dado.d-100:after, {
+    content: "20";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    right: 0;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-1:after, .resultado-d20-oponente .dado.d-2:after, .resultado-d20-oponente .dado.d-3:after, .resultado-d20-oponente .dado.d-4:after, .resultado-d20-oponente .dado.d-5:after {
+    text-transform: uppercase;
+    content: "ataque fallido";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0; right: 0;
+}
+.resultado-d20-oponente .dado.d-1:before, .resultado-d20-oponente .dado.d-2:before, .resultado-d20-oponente .dado.d-3:before, .resultado-d20-oponente .dado.d-4:before, .resultado-d20-oponente .dado.d-5:before {
+    content: "01";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-6:after, .resultado-d20-oponente .dado.d-7:after, .resultado-d20-oponente .dado.d-8:after {
+    text-transform: uppercase;
+    content: "suma +1 punto";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0; right: 0;
+}
+.resultado-d20-oponente .dado.d-6:before, .resultado-d20-oponente .dado.d-7:before, .resultado-d20-oponente .dado.d-8:before {
+    content: "02";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-9:after, .resultado-d20-oponente .dado.d-10:after, .resultado-d20-oponente .dado.d-11:after {
+    text-transform: uppercase;
+    content: "suma +1 punto";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-9:before, .resultado-d20-oponente .dado.d-10:before, .resultado-d20-oponente .dado.d-11:before {
+    content: "03";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-12:after, .resultado-d20-oponente .dado.d-13:after, .resultado-d20-oponente .dado.d-14:after {
+    text-transform: uppercase;
+    content: "suma +1 punto";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-12:before, .resultado-d20-oponente .dado.d-13:before, .resultado-d20-oponente .dado.d-14:before {
+    content: "04";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-15:after, .resultado-d20-oponente .dado.d-16:after, .resultado-d20-oponente .dado.d-17:after, .resultado-d20-oponente .dado.d-18:after, .resultado-d20-oponente .dado.d-19:after {
+    text-transform: uppercase;
+    content: "suma +2 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-15:before, .resultado-d20-oponente .dado.d-16:before, .resultado-d20-oponente .dado.d-17:before, .resultado-d20-oponente .dado.d-18:before, .resultado-d20-oponente .dado.d-19:before {
+    content: "05";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-20:after, .resultado-d20-oponente .dado.d-21:after, .resultado-d20-oponente .dado.d-22:after, .resultado-d20-oponente .dado.d-23:after, .resultado-d20-oponente .dado.d-24:after {
+    text-transform: uppercase;
+    content: "suma +2 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-20:before, .resultado-d20-oponente .dado.d-21:before, .resultado-d20-oponente .dado.d-22:before, .resultado-d20-oponente .dado.d-23:before, .resultado-d20-oponente .dado.d-24:before {
+    content: "06";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-25:after, .resultado-d20-oponente .dado.d-26:after, .resultado-d20-oponente .dado.d-27:after, .resultado-d20-oponente .dado.d-28:after, .resultado-d20-oponente .dado.d-29:after, .resultado-d20-oponente .dado.d-30:after {
+    text-transform: uppercase;
+    content: "suma +2 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-25:before, .resultado-d20-oponente .dado.d-26:before, .resultado-d20-oponente .dado.d-27:before, .resultado-d20-oponente .dado.d-28:before, .resultado-d20-oponente .dado.d-29:before, .resultado-d20-oponente .dado.d-30:before {
+    content: "07";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-31:after, .resultado-d20-oponente .dado.d-32:after, .resultado-d20-oponente .dado.d-33:after, .resultado-d20-oponente .dado.d-34:after, .resultado-d20-oponente .dado.d-35:after, .resultado-d20-oponente .dado.d-36:after {
+    text-transform: uppercase;
+    content: "suma +3 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-31:before, .resultado-d20-oponente .dado.d-32:before, .resultado-d20-oponente .dado.d-33:before, .resultado-d20-oponente .dado.d-34:before, .resultado-d20-oponente .dado.d-35:before, .resultado-d20-oponente .dado.d-36:before {
+    content: "08";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-37:after, .resultado-d20-oponente .dado.d-38:after, .resultado-d20-oponente .dado.d-39:after, .resultado-d20-oponente .dado.d-40:after, .resultado-d20-oponente .dado.d-41:after, .resultado-d20-oponente .dado.d-42:after, .resultado-d20-oponente .dado.d-43:after {
+    text-transform: uppercase;
+    content: "suma +3 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-37:before, .resultado-d20-oponente .dado.d-38:before, .resultado-d20-oponente .dado.d-39:before, .resultado-d20-oponente .dado.d-40:before, .resultado-d20-oponente .dado.d-41:before, .resultado-d20-oponente .dado.d-42:before, .resultado-d20-oponente .dado.d-43:before {
+    content: "09";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-44:after, .resultado-d20-oponente .dado.d-45:after, .resultado-d20-oponente .dado.d-46:after, .resultado-d20-oponente .dado.d-47:after, .resultado-d20-oponente .dado.d-48:after, .resultado-d20-oponente .dado.d-49:after, .resultado-d20-oponente .dado.d-50:after {
+    text-transform: uppercase;
+    content: "suma +3 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-44:before, .resultado-d20-oponente .dado.d-45:before, .resultado-d20-oponente .dado.d-46:before, .resultado-d20-oponente .dado.d-47:before, .resultado-d20-oponente .dado.d-48:before, .resultado-d20-oponente .dado.d-49:before, .resultado-d20-oponente .dado.d-50:before {
+    content: "10";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-51:after, .dado.d-52:after, .dado.d-53:after, .dado.d-54:after, .dado.d-55:after, .dado.d-56:after, .dado.d-57:after {
+    text-transform: uppercase;
+    content: "suma +4 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-51:before, .dado.d-52:before, .dado.d-53:before, .dado.d-54:before, .dado.d-55:before, .dado.d-56:before, .dado.d-57:before {
+    content: "11";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-58:after, .dado.d-59:after, .dado.d-60:after, .dado.d-61:after, .dado.d-62:after, .dado.d-63:after, .dado.d-64:after {
+    text-transform: uppercase;
+    content: "suma +4 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-58:before, .dado.d-59:before, .dado.d-60:before, .dado.d-61:before, .dado.d-62:before, .dado.d-63:before, .dado.d-64:before {
+    content: "12";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-65:after, .dado.d-66:after, .dado.d-67:after, .dado.d-68:after, .dado.d-69:after, .dado.d-70:after {
+    text-transform: uppercase;
+    content: "suma +4 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-65:before, .dado.d-66:before, .dado.d-67:before, .dado.d-68:before, .dado.d-69:before, .dado.d-70:before {
+    content: "13";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-71:after, .dado.d-72:after, .dado.d-73:after, .dado.d-74:after, .dado.d-75:after, .dado.d-76:after {
+    text-transform: uppercase;
+    content: "suma +5 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-71:before, .dado.d-72:before, .dado.d-73:before, .dado.d-74:before, .dado.d-75:before, .dado.d-76:before {
+    content: "14";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-77:after, .dado.d-78:after, .dado.d-79:after, .dado.d-80:after, .dado.d-81:after {
+    text-transform: uppercase;
+    content: "suma +5 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-77:before, .dado.d-78:before, .dado.d-79:before, .dado.d-80:before, .dado.d-81:before {
+    content: "15";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-82:after, .dado.d-83:after, .dado.d-84:after, .dado.d-85:after, .dado.d-86:after {
+    text-transform: uppercase;
+    content: "suma +5 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-82:before, .dado.d-83:before, .dado.d-84:before, .dado.d-85:before, .dado.d-86:before {
+    content: "16";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-87:after, .dado.d-88:after, .dado.d-89:after {
+    text-transform: uppercase;
+    content: "suma +6 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-87:before, .dado.d-88:before, .dado.d-89:before {
+    content: "17";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-90:after, .dado.d-91:after, .dado.d-92:after {
+    text-transform: uppercase;
+    content: "suma +6 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-90:before, .dado.d-91:before, .dado.d-92:before {
+    content: "18";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-93:after, .dado.d-94:after, .dado.d-95:after {
+    text-transform: uppercase;
+    content: "suma +6 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-93:before, .dado.d-94:before, .dado.d-95:before {
+    content: "19";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d20-oponente .dado.d-96:after, .dado.d-97:after, .dado.d-98:after .dado.d-99:after, .dado.d-100:after, {
+    text-transform: uppercase;
+    content: "suma +8 puntos";
+    position: absolute;
+    width: 150px;
+    background: #080808;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Share Tech Mono';
+    font-size: 10px;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 25px; right: 0;
+}
+.resultado-d20-oponente .dado.d-96:before, .dado.d-97:before, .dado.d-98:before .dado.d-99:before, .dado.d-100:before, {
+    content: "20";
+    text-transform: uppercase;
+    position: absolute;
+    width: 50px;
+    background: var(--accent5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Teko';
+    font-size: 16px;
+    font-weight: 700;
+    color: #bbb;
+    padding-top: 3px;
+}
+.resultado-d10 .dado.d-1:before, .resultado-d10 .dado.d-2:before, .resultado-d10 .dado.d-3:before, .resultado-d10 .dado.d-4:before, .resultado-d10 .dado.d-5:before, .resultado-d10 .dado.d-6:before, .resultado-d10 .dado.d-7:before, .resultado-d10 .dado.d-8:before, .resultado-d10 .dado.d-9:before, .resultado-d10 .dado.d-10:before {
+    width: 160px;
+    box-sizing: border-box;
+    font-family: 'Teko';
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    padding-top: 2px;
+    color: #bbb;
+    background: #080808;
+}
+.resultado-d10 .dado.d-1:before {
+content: "1";
+}
+.resultado-d10 .dado.d-2:before {
+content: "2";
+}
+.resultado-d10 .dado.d-3:before {
+content: "3";
+}
+.resultado-d10 .dado.d-4:before {
+content: "4";
+}
+.resultado-d10 .dado.d-5:before {
+content: "5";
+}
+.resultado-d10 .dado.d-6:before {
+content: "6";
+}
+.resultado-d10 .dado.d-7:before {
+content: "7";
+}
+.resultado-d10 .dado.d-8:before {
+content: "8";
+}
+.resultado-d10 .dado.d-9:before {
+content: "9";
+}
+.resultado-d10 .dado.d-10:before {
+content: "10";
+}
