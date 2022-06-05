@@ -957,7 +957,7 @@
     right: 0;
     padding-top: 3px;
 }
-.resultado-d20-personaje .dado.d-96:before, .dado.d-97:before, .dado.d-98:before .dado.d-99:before, .dado.d-100:before, {
+.resultado-d20-personaje .dado.d-96:before, .dado.d-97:before, .dado.d-98:before .dado.d-99:before, .dado.d-100:before {
     text-transform: uppercase;
     content: "sumas +8 puntos";
     position: absolute;
@@ -973,7 +973,7 @@
     text-shadow: 2px 2px 1px #000;
     padding-top: 25px;
 }
-.resultado-d20-personaje .dado.d-96:after, .dado.d-97:after, .dado.d-98:after .dado.d-99:after, .dado.d-100:after, {
+.resultado-d20-personaje .dado.d-96:after, .dado.d-97:after, .dado.d-98:after .dado.d-99:after, .dado.d-100:after {
     content: "20";
     text-transform: uppercase;
     position: absolute;
@@ -1598,7 +1598,7 @@
     color: #bbb;
     padding-top: 3px;
 }
-.resultado-d20-oponente .dado.d-96:after, .dado.d-97:after, .dado.d-98:after .dado.d-99:after, .dado.d-100:after, {
+.resultado-d20-oponente .dado.d-96:after, .dado.d-97:after, .dado.d-98:after .dado.d-99:after, .dado.d-100:after {
     text-transform: uppercase;
     content: "suma +8 puntos";
     position: absolute;
@@ -1614,7 +1614,7 @@
     text-shadow: 2px 2px 1px #000;
     padding-top: 25px; right: 0;
 }
-.resultado-d20-oponente .dado.d-96:before, .dado.d-97:before, .dado.d-98:before .dado.d-99:before, .dado.d-100:before, {
+.resultado-d20-oponente .dado.d-96:before, .dado.d-97:before, .dado.d-98:before .dado.d-99:before, .dado.d-100:before {
     content: "20";
     text-transform: uppercase;
     position: absolute;
