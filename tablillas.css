@@ -699,7 +699,7 @@
     font-size: 7px;
     padding: 0px 5px 0px 5px;
 }
-.contador {
+.tabtrcont {
     display: initial;
 }
 .tabtrtxt {
@@ -707,20 +707,20 @@
     line-height: 140%;
     text-align: justify;
     padding: 20px 20px 20px 20px;
-    border-top: 1px solid var(--accent4);
+    border-top: 1px solid var(--groups);
     margin: 10px 10px 0px 10px;
 }
-.soptabalgo {
+.tabtrqu {
     font-size: 10px;
     line-height: 17px;
     text-align: justify;
     padding: 20px 20px 20px 20px;
-    border-top: 1px solid var(--accent4);
+    border-top: 1px solid var(--groups);
     margin: 0px 10px;
 }
-.soptabalgo b {
+.tabtrqu b {
     font-family: 'Share Tech Mono';
     text-transform: uppercase;
-    color: var(--residentes);
+    color: var(--groups);
     letter-spacing: 0.5px;
 }
