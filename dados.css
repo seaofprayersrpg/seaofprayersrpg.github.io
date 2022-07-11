@@ -120,7 +120,19 @@
     border-left: 20px solid var(--accent5);
     border-right: 20px solid var(--accent5);
 }
-.resultado-d10 .dado, .resultado-epílogo .dado {
+.resultado-d10 .dado {
+    outline: 1px solid #111;
+    width: 201px;
+    height: 51px;
+    border-radius: 0px 10px 0px 10px;
+    overflow: hidden;
+    position: relative;
+    background: #080808;
+    box-sizing: border-box;
+    border-left: 20px solid var(--accent5);
+    border-right: 20px solid var(--accent5);
+}
+.resultado-epílogo .dado {
     outline: 1px solid #111;
     width: 201px;
     height: 51px;
@@ -232,6 +244,11 @@
     font-size: 70px;
     opacity: 0.2;
     color: #fff;
+}
+.dadoicone {
+opacity: 0.1;
+font-size: 65px;
+margin-left: 2px;
 }
 .resultado-multiplicador .dado.d-1:after, .resultado-multiplicador .dado.d-2:after, .resultado-multiplicador .dado.d-3:after {
     position: absolute;
@@ -1685,7 +1702,7 @@ content: "10";
     width: 160px;
     box-sizing: border-box;
     font-family: 'Teko';
-    font-size: 20px;
+    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1694,6 +1711,8 @@ content: "10";
     color: #bbb;
     background: #080808;
     text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.8;
 }
 .resultado-epílogo .dado.d-1:before, .resultado-epílogo .dado.d-3:before, .resultado-epílogo .dado.d-5:before, .resultado-epílogo .dado.d-7:before, .resultado-epílogo .dado.d-9:before {
     content: "negativas";
