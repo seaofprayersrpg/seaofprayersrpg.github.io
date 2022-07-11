@@ -31,10 +31,10 @@
     color: var(--accent3);
     font-weight: 600;
 }
-.titulo-d20-personaje, .titulo-d20-oponente, .titulo-d10, .titulo-multiplicador {
+.titulo-d20-personaje, .titulo-d20-oponente, .titulo-d10, .titulo-multiplicador, .titulo-epílogo {
     display: none;
 }
-.resultado-d20-personaje, .resultado-d20-oponente, .resultado-d10, .resultado-multiplicador {
+.resultado-d20-personaje, .resultado-d20-oponente, .resultado-d10, .resultado-multiplicador, .resultado-epílogo {
     position: relative;
     display: flex;
     justify-content: center;
@@ -56,7 +56,7 @@
     border-right: 3px solid var(--accent4);
     border-left: 3px solid var(--accent4);
 }
-.resultado-d10 {
+.resultado-d10, .resultado-epílogo {
     margin-top: 20px;
     border-right: 3px solid var(--accent4);
     border-left: 3px solid var(--accent4);
@@ -92,6 +92,14 @@
     font-family: 'Share Tech Mono';
     letter-spacing: -0.5px;
 }
+.resultado-epílogo:before {
+    content: "consecuencias de la contaminación";
+    position: absolute;
+    top: 0px;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono';
+    letter-spacing: -0.5px;
+}
 .resultado-multiplicador:before {
     content: "éxito de la habilidad";
     position: absolute;
@@ -112,7 +120,7 @@
     border-left: 20px solid var(--accent5);
     border-right: 20px solid var(--accent5);
 }
-.resultado-d10 .dado {
+.resultado-d10 .dado, resultado-epílogo .dado {
     outline: 1px solid #111;
     width: 201px;
     height: 51px;
@@ -210,7 +218,7 @@
     letter-spacing: 0.5px;
     color: #bbb;
 }
-.dadoiconm, .dadoicon10 {
+.dadoiconm, .dadoicon10, .dadoicone {
     width: 50px;
     height: 50px;
     position: absolute;
