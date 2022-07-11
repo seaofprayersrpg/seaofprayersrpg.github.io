@@ -120,7 +120,7 @@
     border-left: 20px solid var(--accent5);
     border-right: 20px solid var(--accent5);
 }
-.resultado-d10 .dado, resultado-epílogo .dado {
+.resultado-d10 .dado, .resultado-epílogo .dado {
     outline: 1px solid #111;
     width: 201px;
     height: 51px;
@@ -1680,4 +1680,24 @@ content: "9";
 }
 .resultado-d10 .dado.d-10:before {
 content: "10";
+}
+.resultado-epílogo .dado.d-1:before, .resultado-epílogo .dado.d-2:before, .resultado-epílogo .dado.d-3:before, .resultado-epílogo .dado.d-4:before, .resultado-epílogo .dado.d-5:before, .resultado-epílogo .dado.d-6:before, .resultado-epílogo .dado.d-7:before, .resultado-epílogo .dado.d-8:before, .resultado-epílogo .dado.d-9:before, .resultado-epílogo .dado.d-10:before {
+    width: 160px;
+    box-sizing: border-box;
+    font-family: 'Teko';
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    padding-top: 2px;
+    color: #bbb;
+    background: #080808;
+    text-transform: uppercase;
+}
+.resultado-epílogo .dado.d-1:before, .resultado-epílogo .dado.d-3:before, .resultado-epílogo .dado.d-5:before, .resultado-epílogo .dado.d-7:before, .resultado-epílogo .dado.d-9:before {
+    content: "negativas";
+}
+.resultado-epílogo .dado.d-2:before, .resultado-epílogo .dado.d-4:before, .resultado-epílogo .dado.d-6:before, .resultado-epílogo .dado.d-8:before, .resultado-epílogo .dado.d-10:before {
+    content: "positivas";
 }
